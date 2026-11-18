@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ATMOS — Weather Dashboard</title>
+<link rel="stylesheet" href="css/style.css"><script defer src="js/script.js"></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="logo">A</span> ATMOS<span class="brand-sub">/ WEATHER INTELLIGENCE</span></a><div class="header-actions"><button id="unit-toggle" class="small-btn" aria-label="Switch temperature unit">°C / °F</button><button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">☀️</button></div></header>
+<main class="container">
+<section class="welcome"><p class="eyebrow"><span class="live-dot"></span> LIVE WEATHER DATA</p><h1>Know the sky.<br><em>Plan your day.</em></h1><p class="muted">Real-time conditions and a five-day outlook, wherever you are.</p></section>
+<section class="search-panel"><form id="search-form"><label for="city-input">SEARCH LOCATION</label><div class="search-row"><span class="search-icon">⌕</span><input id="city-input" type="search" placeholder="Enter a city, e.g. Mumbai" autocomplete="off" required minlength="2"><button class="search-btn" id="search-btn" type="submit">Search <span>→</span></button></div></form><div id="recent-wrap" class="recent-wrap hidden"><span class="recent-label">RECENT</span><div id="recent-searches" class="chips"></div></div></section>
+<div id="status" class="status" role="status">Search for a city to see its weather.</div>
+<section id="weather-content" class="hidden">
+<div class="section-heading"><div><p class="eyebrow">CURRENT CONDITIONS</p><h2 id="place-name">—</h2><p id="place-meta" class="muted"></p></div><p id="updated-label" class="updated"></p></div>
+<div class="current-card"><div class="current-main"><div><p id="current-day" class="muted small"></p><div class="temperature"><span id="temperature">--</span><sup id="unit-symbol">°C</sup></div><h3 id="condition">—</h3><p id="feels-like" class="muted">Feels like —</p></div><div id="current-icon" class="weather-icon">☀️</div></div><div class="metrics"><article><span class="metric-icon">💧</span><div><small>HUMIDITY</small><strong id="humidity">--%</strong></div></article><article><span class="metric-icon">〰️</span><div><small>WIND SPEED</small><strong id="wind">-- km/h</strong></div></article><article><span class="metric-icon">🌧️</span><div><small>PRECIPITATION</small><strong id="rain">-- mm</strong></div></article></div></div>
+<div class="forecast-heading"><div><p class="eyebrow">THE NEXT FEW DAYS</p><h2>5-day forecast</h2></div><span class="muted small">DAILY OUTLOOK</span></div><div id="forecast" class="forecast-grid"></div>
+</section>
+</main>
+<footer><strong>ATMOS</strong><span>POWERED BY OPEN-METEO · BUILT WITH FETCH API</span></footer>
+</body></html>
